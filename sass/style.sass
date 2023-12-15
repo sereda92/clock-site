@@ -1,0 +1,583 @@
+@import 'reset'
+@import 'variables'
+
+
+
+
+// ------------------------
+
+body 
+    font-family: 'PT Sans', sans-serif
+    font-style: normal
+    font-weight: 400
+
+._container 
+    max-width: 1110px
+    margin: 0 auto
+    padding: 0 15px
+
+// ----------------------
+
+.header__background
+    padding: 14px 0
+    background: $color-black
+
+.header__contact 
+    display: flex
+    justify-content: space-between
+
+.header__contact-info 
+    display: flex
+
+.header__contact-text 
+    margin-left: 15px
+    font-size: 12px
+    line-height: 16px
+    color: $color-969696
+
+.header__contact-text
+    span 
+        margin: 0 13px
+
+.header__register 
+    display: flex
+
+.header__register-link 
+    margin-left: 10px
+    display: flex
+
+.register-link 
+    font-size: 12px
+    line-height: 16px
+    color: $color-969696
+    transition: all $speed-transition ease
+
+.register-link
+    &:hover 
+        color: $color-white
+
+.header-wrapper
+    position: relative
+
+.header__menu-background 
+    height: 80px
+    background: $color-0F0F0F
+    padding: 27px 0 25px 0
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 100
+    width: 100%
+
+.header--fixed
+    position: fixed
+    padding: 15px 0
+    height: 60px
+    left: 0
+    top: 0
+    z-index: 20
+    background-color: rgba(0, 0, 0,.9)
+    transition: all $speed-transition ease
+
+.header__register-link
+    p 
+        margin: 0 3px
+        font-size: 12px
+        line-height: 16px
+        color: $color-969696
+
+.header__menu 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+
+.header__item 
+    display: flex
+
+.header__item 
+    display: flex
+    align-items: center
+
+.header__link 
+    padding: 31px 20px
+    font-size: 14px
+    line-height: 18px
+    text-transform: uppercase
+    color: $color-969696
+    transition: all $speed-transition ease
+
+.header__link
+    &:hover 
+        background: $color-header-nav
+        color: $color-white
+
+.header__link-fixed
+    padding: 22px 20px
+
+.search__input
+    display: inline-block
+    background-color: $color-D0D0D0
+    visibility: hidden
+    border-radius: 20px
+    width: 0
+    transition: all $speed-transition ease
+    padding: 5px 0
+
+.search__active
+    width: 150px
+    visibility: visible
+    padding: 5px 5px
+    border-radius: 20px
+    
+.header__link_search
+    display: flex
+    align-items: center
+    gap: 15px
+    margin-left: 15px
+
+.search__item
+    display: flex
+    align-items: center
+    gap: 10px
+// ------------------------
+
+.burger-menu 
+    display: none
+
+.menu-btn 
+    display: flex
+    align-items: center
+    position: absolute
+    top: 0
+    right: 15px
+    width: 26px
+    height: 26px
+    cursor: pointer
+    z-index: 1
+
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after 
+    display: block
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: $color-969696
+    transition-duration: $speed-transition
+
+.menu-btn>span::before 
+    content: ''
+    top: -8px
+
+.menu-btn>span::after 
+    content: ''
+    top: 8px
+
+.menubox 
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    right: -100%
+    margin: 0
+    width: 100%
+    height: 100%
+    padding: 110px 0
+    list-style: none
+    background: rgba(15, 15, 15, .9)
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+
+.menu-item 
+    display: block
+    margin-top: 5px
+    padding: 12px 24px
+    font-size: 24px
+    line-height: 18px
+    text-transform: uppercase
+    color: #c8c8c8
+    text-align: center
+    text-decoration: none
+    transition-duration: $speed-transition
+
+.menu-item:hover 
+    background: $color-header-nav
+
+#menu-toggle 
+    opacity: 0
+
+#menu-toggle:checked~.menu-btn>span 
+    transform: rotate(45deg)
+
+#menu-toggle:checked~.menu-btn>span::before 
+    transform: rotate(0)
+    top: 0
+
+#menu-toggle:checked~.menu-btn>span::after 
+    transform: rotate(90deg)
+    top: 0
+
+#menu-toggle:checked~.menubox 
+    visibility: visible
+    right: 0
+
+.btn-arrow
+    position: fixed
+    bottom: 30px
+    right: 30px
+
+.arrow
+    width: 70px
+    background-color: rgba(255, 255, 255, 0.8)
+    transform: rotate(90deg)
+    padding: 25px
+    transition: all $speed-transition ease
+    border-radius: 50%
+    opacity: .5
+
+.arrow-fixed
+    opacity: 1
+    transform: rotate(-90deg)
+
+// ------------------------------
+
+
+.error-background
+    background-color: rgba(0, 0, 0, .4)
+    height: 100vh
+
+.first-screen_error 
+    background-image: url(../img/Rectangle.jpg)
+    height: 100%
+    background-size: cover
+    background-position: center
+    text-align: center
+
+.first-screen
+    background-image: url(../img/Rectangle.jpg)
+    height: 100%
+    background-size: cover
+    background-position: center
+    text-align: center
+    padding-bottom: 154px
+
+.first-screen__title 
+    margin: 160px 0 80px 0
+    border: 3px solid white
+    display: inline-block
+    padding: 90px 64px 103px
+
+.first-screen__subtitle 
+    margin-top: 7px
+    font-size: 22px
+    line-height: 28px
+    text-align: center
+    text-transform: uppercase
+    color: $color-white
+
+.first-screen_text 
+    display: block
+    max-width: 730px
+    margin: 0 auto
+    font-size: 16px
+    line-height: 150%
+    text-align: center
+    text-transform: uppercase
+    color: $color-white
+
+// -------------------------------------------
+
+
+.catalog 
+    display: grid
+    grid-template-columns: 1fr 880px
+    background-color: $color-black
+
+.block-season 
+    display: block
+
+.block-season-title 
+    text-align: center
+    padding-top: 90px
+
+.block-season_text 
+    margin: 0 10px
+    font-family: 'Playfair Display'
+    font-size: 36px
+    line-height: 42px
+    text-transform: uppercase
+    color: $color-white
+
+.block-catalog 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    justify-items: center
+
+.block-season_line 
+    margin-top: 50px
+
+.block-catalog_item 
+    margin-top: 50px
+    margin-right: 5px
+    cursor: pointer
+    transition: $speed-transition
+
+.block-catalog_item
+    &:hover 
+        opacity: 0.7
+        
+._item-image
+    overflow: hidden
+
+._item-img
+    padding: 55px 22px
+    background: #191B1C
+    width: 100%
+    transition: transform $speed-transition
+
+._item-img
+    &:hover
+        transform: scale(1.1)
+
+
+._item-name
+    font-family: 'Playfair Display'
+    margin: 25px 0 10px 0
+    font-size: 18px
+    line-height: 21px
+    color: $color-white
+
+._item-price
+    font-family: 'Playfair Display'
+    font-size: 16px
+    line-height: 19px
+    color: $color-D0D0D0
+
+.block-colection
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 730px
+
+._new-colection-img 
+    display: flex
+    background-image: url(../img/Rectangle\ 8.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    max-width: 100%
+    height: 730px
+
+// ----------------------------------------
+
+.colection 
+    display: grid
+    grid-template-columns: 880px 1fr
+    background-color: $color-black
+
+.colection-img 
+    display: flex
+    align-items: center
+    justify-content: center
+    background-image: url(../img/Rectangle\ 9.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    max-width: 100%
+
+.block-catalog-text 
+    display: block
+    max-width: 471px
+    margin: 0 auto
+
+.colection-seasonTwo
+    padding: 90px 0 100px 0
+
+.colection-season-title 
+    text-align: center
+
+.block_text
+    margin-top: 40px
+    font-size: 14px
+    line-height: 150%
+    text-align: center
+    color: $color-white
+
+.colection-button 
+    text-align: center
+    margin-top: 73px
+
+.colection-btn 
+    border: 1px solid white
+    padding: 12px 28px
+    font-size: 18px
+    line-height: 23px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: $color-white
+    transition: all $speed-transition ease
+
+.colection-btn
+    &:hover 
+        background: $color-header-nav
+
+// ----------------------
+
+.new-colection
+    background-color: $color-black
+    height: 100%
+    padding: 120px 0 150px 0
+
+.new-colection_title 
+    font-family: 'Playfair Display'
+    font-size: 36px
+    line-height: 42px
+    text-align: center
+    text-transform: uppercase
+    color: $color-white
+
+.colection-portfolio 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    margin: 0 10px
+
+//----------------------------
+
+.block-brand
+    background: $color-0F0F0F
+    height: 100%
+    padding: 60px 0 80px 0
+
+._item-name
+    span 
+        border: 3px solid white
+        border-radius: 50%
+        padding: 5px
+
+.catalog-text 
+    flex-direction: column
+
+.catalog-text
+    h5 
+        font-size: 8px
+        color: $color-white
+        margin-top: -8px
+        margin-left: 67px
+
+//------------------------------
+
+.footer-container 
+    padding: 80px 0 100px 0
+    max-height: 100%
+    background-image: url(../img/Rectangle\ 15.jpg)
+    background-size: cover
+    background-position: center
+
+.footer-wrapper 
+    display: flex
+    justify-content: space-between
+
+.footer-title 
+    margin-bottom: 40px
+    font-family: 'Playfair Display'
+    font-size: 24px
+    line-height: 28px
+    text-transform: uppercase
+    color: $color-white
+
+.footer-text 
+    max-width: 350px
+    font-size: 14px
+    line-height: 150%
+    color: $color-white
+
+.footer-about_text 
+    max-width: 350px
+
+.foote-row_one
+    margin-bottom: 20px
+    display: flex
+    justify-content: space-between
+
+.foote-row_two 
+    display: flex
+
+.footer-categories_flex 
+    margin: 0 10px
+
+._grid-item 
+    padding: 10px 20px
+    background: $color-0F0F0F
+
+._grid-item:hover 
+    background: $color-header-nav
+    transition: $speed-transition
+
+.footer-link 
+    margin-right: 20px
+    color: $color-white
+
+.footer-form
+    margin-top: 40px
+
+.footer-input 
+    width: 210px
+    height: 42px
+    color: $color-white
+    background: rgba(255, 255, 255, 0.4)
+
+input
+    text-indent: 15px
+
+.footer-button 
+    margin-top: 10px
+    padding: 10px 20px
+    font-size: 14px
+    line-height: 150%
+    letter-spacing: 0.05em
+    color: $color-white
+    background: $color-0F0F0F
+
+.footer-button
+    &:hover 
+        background: $color-header-nav
+        transition: $speed-transition
+
+.sub-footer
+    background: $color-0F0F0F
+
+.sub-footer-row
+    display: flex
+    justify-content: space-between
+    padding: 17px
+
+.sub-footer_text 
+    font-size: 12px
+    line-height: 16px
+    color: $color-D0D0D0
+
+//--------------------------
+
+::-webkit-input-placeholder
+    color: rgba(255, 255, 255, .7)
+
+:-moz-placeholder
+    color: rgba(255, 255, 255, .7)
+
+::-moz-placeholder 
+    color: rgba(255, 255, 255, .7)
+
+:-ms-input-placeholder 
+    color: rgba(255, 255, 255, .7)
+
+//----------------------------------
+
+
+
+
+
+
+
+@import 'media'
